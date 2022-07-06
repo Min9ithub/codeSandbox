@@ -1,0 +1,6 @@
+extends layout
+block content
+  p=movies.summary
+    ul
+      each genre in movies.genres
+        li=genre

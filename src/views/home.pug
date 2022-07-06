@@ -1,0 +1,12 @@
+extends layout
+include mixins/movie
+
+block content
+  form
+    input(placeholder="Filter by year" name="year")
+    input(placeholder="Filter by rating" name="rating")
+    input(type="submit", value="Search")
+  each movie in movies
+    +movie(movie)
+  else
+    li Sorry nothing found.
